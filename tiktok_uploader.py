@@ -261,10 +261,8 @@ def main():
     # 2. Upload Mode
     source_dir = Path(args.source)
     archive_dir = Path(args.archive)
-    
-    if not source_dir.exists() or not source_dir.is_dir():
-        print(f"Error: Source directory '{source_dir}' does not exist.")
-        sys.exit(1)
+    source_dir.mkdir(parents=True, exist_ok=True)
+    archive_dir.mkdir(parents=True, exist_ok=True)
         
     # Get all video files in source directory (mp4, mkv, avi, mov)
     video_extensions = {".mp4", ".mkv", ".avi", ".mov"}
