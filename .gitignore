@@ -1,0 +1,6 @@
+.tiktok_profile/
+__pycache__/
+*.pyc
+*.log
+venv/
+.env
