@@ -30,8 +30,8 @@ and archiving of posted files. Built to run daily via cron.
 ## Installation
 
 ```bash
-git clone <your-repo-url> tiktok_uploader
-cd tiktok_uploader
+git clone https://github.com/lZXGl/tiktok-auto-uploader.git
+cd tiktok-auto-uploader
 
 python3 -m venv venv
 source venv/bin/activate
