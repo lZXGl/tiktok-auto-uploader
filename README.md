@@ -27,14 +27,26 @@ and archiving of posted files. Built to run daily via cron.
 | Target     | TikTok Studio web (headless)       |
 | Environ    | Linux server, cron-driven          |
 
-## Installation
+## Installation & Quick Start (v2)
 
+### Option 1: Zero-Setup with `uv` (Recommended)
+This tool supports PEP 723 inline metadata:
+
+```bash
+# 1. First-time login
+uv run tiktok_uploader.py --login
+
+# 2. Upload headlessly
+uv run tiktok_uploader.py --source /path/to/videos --archive /path/to/archive --headless
+```
+
+### Option 2: Traditional `pip` / `venv`
 ```bash
 git clone https://github.com/lZXGl/tiktok-auto-uploader.git
 cd tiktok-auto-uploader
 
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 playwright install chromium
 ```
